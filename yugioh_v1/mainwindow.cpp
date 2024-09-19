@@ -51,16 +51,17 @@ MainWindow::~MainWindow()
     delete uiForm1;
 }
 
-void MainWindow::GoToScreen0()
+void MainWindow::GoToScreen0()  //スクリーンを変更
 {
     stackedWidget->setCurrentWidget(screen0);
 }
 
-void MainWindow::GoToScreen1()
+void MainWindow::GoToScreen1()  //スクリーンを変更
 {
     stackedWidget->setCurrentWidget(screen1);
 }
-void MainWindow::setupDatabase() {
+
+void MainWindow::setupDatabase() {  //データベースを読み込み
     if (!db.isOpen()) {
         db = QSqlDatabase::addDatabase("QSQLITE");
         db.setDatabaseName("names.db");
@@ -82,7 +83,7 @@ void MainWindow::setupDatabase() {
     loadNamesToComboBox();
 }
 
-void MainWindow::loadNamesToComboBox() {
+void MainWindow::loadNamesToComboBox() {    //コンボボックスの値をSQLからデータを読み込んで出力
     uiForm1->comboBox1->clear();
     uiForm1->comboBox2->clear();
 
@@ -94,15 +95,9 @@ void MainWindow::loadNamesToComboBox() {
     }
 }
 
-void MainWindow::onSaveButtonClicked() {
+void MainWindow::onSaveButtonClicked() {    //セーブボタンを押したときにSQL保存、コンボボックスの値を変更
     QString name = uiForm1->lineEdit->text();  // QLineEditから名前を取得
     if (name.isEmpty()) {
-        //QMessageBox::warning(this, "Input Error", "名前を入力してください！");
-        /*QMessageBox msgBox0;
-        msgBox0.setWindowTitle("Input Error");
-        msgBox0.setText("名前を入力してください。");
-        msgBox0.setIcon(QMessageBox::NoIcon);  // アイコンをなしに設定
-        msgBox0.exec();*/
         MessageBox("Input Error","名前を入力してください。");
         return;
     }
@@ -113,23 +108,10 @@ void MainWindow::onSaveButtonClicked() {
 
     if (!query.exec()) {
         qDebug() << "Error inserting into database: " << query.lastError().text();
-        //QMessageBox::critical(this, "Database Error", "名前を保存できませんでした。既に存在している可能性があります。");
-        /*QMessageBox msgBox1;
-        msgBox1.setWindowTitle("Database Error");
-        msgBox1.setText("名前を保存できませんでした。既に存在している可能性があります。");
-        msgBox1.setIcon(QMessageBox::NoIcon);  // アイコンをなしに設定
-        msgBox1.exec();*/
         MessageBox("Database Error","名前を保存できませんでした。既に存在している可能性があります。");
-
 
     } else {
         qDebug() << "Name saved successfully!";
-        //QMessageBox::information(this, "Success", "名前が保存されました！");
-        /*MessageBox msgBox2;
-        msgBox2.setWindowTitle("Success");
-        msgBox2.setText("名前が保存されました！");
-        msgBox2.setIcon(QMessageBox::NoIcon);  // アイコンをなしに設定
-        msgBox2.exec();*/
         MessageBox("Success","名前が保存されました");
 
         uiForm1->comboBox1->addItem(name);
@@ -138,7 +120,7 @@ void MainWindow::onSaveButtonClicked() {
     }
 }
 
-void MainWindow::MessageBox(QString title,QString text) {
+void MainWindow::MessageBox(QString title,QString text) {   //メッセージボックスで音を消して出力
     QMessageBox msgBox;
     msgBox.setWindowTitle(title);
     msgBox.setText(text);
