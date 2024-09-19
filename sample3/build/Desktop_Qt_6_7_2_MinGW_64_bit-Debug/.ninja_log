@@ -1,0 +1,11 @@
+# ninja log v6
+3	26	7478249315615842	CMakeFiles/clean.additional	adcc2f785672e3a3
+27	37	7478249315856402	clean	5292861e31b232a5
+9	623	7478249369069272	sample3_autogen/timestamp	97c35ae926f2fe79
+9	623	7478249369069272	sample3_autogen/mocs_compilation.cpp	97c35ae926f2fe79
+9	623	7478249369069272	D:/Qt/Project/sample3/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/sample3_autogen/timestamp	97c35ae926f2fe79
+9	623	7478249369069272	D:/Qt/Project/sample3/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/sample3_autogen/mocs_compilation.cpp	97c35ae926f2fe79
+627	3234	7478249369938279	CMakeFiles/sample3.dir/sample3_autogen/mocs_compilation.cpp.obj	881ccf2b1c69682b
+630	3283	7478249369975201	CMakeFiles/sample3.dir/main.cpp.obj	9fdb8dea20f8e3be
+633	3418	7478249370005616	CMakeFiles/sample3.dir/mainwindow.cpp.obj	9234354ffb022931
+3418	3892	7478249397862106	sample3.exe	2e857df453df44cd
