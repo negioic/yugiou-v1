@@ -20,6 +20,7 @@ HEADERS += \
 
 FORMS += \
     form1.ui \
+    form2.ui \
     mainwindow.ui
 
 # Default rules for deployment.

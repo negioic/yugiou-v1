@@ -25,10 +25,10 @@
   <property name="windowTitle">
    <string>Form1</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="backmenuButton">
    <property name="geometry">
     <rect>
-     <x>580</x>
+     <x>610</x>
      <y>490</y>
      <width>181</width>
      <height>91</height>
@@ -41,8 +41,8 @@
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>460</y>
+     <x>10</x>
+     <y>480</y>
      <width>201</width>
      <height>71</height>
     </rect>
@@ -51,20 +51,20 @@
     <string>Input deck name</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="saveButton">
+  <widget class="QPushButton" name="savedeckButton">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>530</y>
-     <width>141</width>
-     <height>61</height>
+     <x>90</x>
+     <y>550</y>
+     <width>121</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
     <string>Save</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox1">
+  <widget class="QComboBox" name="yourdeckBox">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -74,7 +74,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox2">
+  <widget class="QComboBox" name="enemydeckBox">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -84,10 +84,10 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="label_1">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>50</x>
      <y>30</y>
      <width>121</width>
      <height>31</height>
@@ -141,7 +141,7 @@
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton">
+  <widget class="QRadioButton" name="firstsecondButton1">
    <property name="geometry">
     <rect>
      <x>470</x>
@@ -159,7 +159,7 @@
     <string>First</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_2">
+  <widget class="QRadioButton" name="firstsecondButton2">
    <property name="geometry">
     <rect>
      <x>470</x>
@@ -175,6 +175,122 @@
    </property>
    <property name="text">
     <string>Second</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="savedataButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>490</y>
+     <width>181</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>230</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>WIN or LOSE</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="winloseButton1">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>270</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>21</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>WIN</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="winloseButton2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>310</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>21</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>LOSE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>230</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>WIN or LOSE Reason</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="reasontextEdit">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>280</y>
+     <width>251</width>
+     <height>71</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>410</y>
+     <width>181</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Input deck name&lt;br/&gt;(もしデッキ名が見つからなければ&lt;br/&gt;ここから追加できます)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
  </widget>

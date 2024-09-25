@@ -40,7 +40,9 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "GoToScreen0",
     "",
     "GoToScreen1",
-    "onSaveButtonClicked",
+    "GoToScreen2",
+    "onSaveButton1Clicked",
+    "onSaveButton2Clicked",
     "loadNamesToComboBox",
     "MessageBox",
     "title",
@@ -57,7 +59,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -65,18 +67,22 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   44,    2, 0x08,    1 /* Private */,
-       3,    0,   45,    2, 0x08,    2 /* Private */,
-       4,    0,   46,    2, 0x08,    3 /* Private */,
-       5,    0,   47,    2, 0x08,    4 /* Private */,
-       6,    2,   48,    2, 0x08,    5 /* Private */,
+       1,    0,   56,    2, 0x08,    1 /* Private */,
+       3,    0,   57,    2, 0x08,    2 /* Private */,
+       4,    0,   58,    2, 0x08,    3 /* Private */,
+       5,    0,   59,    2, 0x08,    4 /* Private */,
+       6,    0,   60,    2, 0x08,    5 /* Private */,
+       7,    0,   61,    2, 0x08,    6 /* Private */,
+       8,    2,   62,    2, 0x08,    7 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,    7,    8,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString,    9,   10,
 
        0        // eod
 };
@@ -94,7 +100,11 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'GoToScreen1'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'onSaveButtonClicked'
+        // method 'GoToScreen2'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onSaveButton1Clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onSaveButton2Clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'loadNamesToComboBox'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -114,9 +124,11 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->GoToScreen0(); break;
         case 1: _t->GoToScreen1(); break;
-        case 2: _t->onSaveButtonClicked(); break;
-        case 3: _t->loadNamesToComboBox(); break;
-        case 4: _t->MessageBox((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 2: _t->GoToScreen2(); break;
+        case 3: _t->onSaveButton1Clicked(); break;
+        case 4: _t->onSaveButton2Clicked(); break;
+        case 5: _t->loadNamesToComboBox(); break;
+        case 6: _t->MessageBox((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         default: ;
         }
     }
@@ -141,13 +153,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 7;
     }
     return _id;
 }

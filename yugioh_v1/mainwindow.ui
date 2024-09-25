@@ -32,7 +32,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton1">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -42,7 +42,20 @@
      </rect>
     </property>
     <property name="text">
-     <string>Form1</string>
+     <string>Save match results</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>180</y>
+      <width>221</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show save data</string>
     </property>
    </widget>
   </widget>

@@ -23,7 +23,8 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton;
+    QPushButton *pushButton1;
+    QPushButton *pushButton2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -37,9 +38,12 @@ public:
         MainWindow->setBaseSize(QSize(1000, 600));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(40, 60, 221, 101));
+        pushButton1 = new QPushButton(centralwidget);
+        pushButton1->setObjectName("pushButton1");
+        pushButton1->setGeometry(QRect(40, 60, 221, 101));
+        pushButton2 = new QPushButton(centralwidget);
+        pushButton2->setObjectName("pushButton2");
+        pushButton2->setGeometry(QRect(40, 180, 221, 101));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -57,7 +61,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Form1", nullptr));
+        pushButton1->setText(QCoreApplication::translate("MainWindow", "Save match results", nullptr));
+        pushButton2->setText(QCoreApplication::translate("MainWindow", "Show save data", nullptr));
     } // retranslateUi
 
 };
